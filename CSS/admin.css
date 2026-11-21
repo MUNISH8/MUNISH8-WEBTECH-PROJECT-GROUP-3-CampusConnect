@@ -1,0 +1,121 @@
+
+.stats {
+    display: flex;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e5ded4;
+    border-left: 6px solid #c2a27c;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+}
+
+.stat-card h3 {
+    color: #607e60;
+    margin: 0;
+}
+
+.stat-card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #607e60;
+    margin: 15px 0 0;
+}
+
+.admin-box {
+    background: white;
+    border: 1px solid #e5ded4;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.admin-box h2 {
+    color: #607e60;
+    margin-top: 0;
+}
+
+.admin-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.admin-box input[type="text"],
+.admin-box select,
+.admin-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.checkbox-row label {
+    margin: 0;
+}
+
+.post-btn {
+    background: #607e60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.post-btn:hover {
+    background: #4c694c;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #e5ded4;
+    text-align: left;
+}
+
+th {
+    background: #f7f3ee;
+    color: #607e60;
+}
+
+.delete-btn {
+    background: #b75e52;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #93483f;
+}
+
+@media (max-width: 700px) {
+    .stats {
+        flex-direction: column;
+    }
+}
