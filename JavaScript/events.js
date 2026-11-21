@@ -81,7 +81,7 @@ for (let i = 0; i < buttons.length; i++)
 {
     buttons[i].addEventListener("click", function()
     {
-        let card = this.parentElement;
+        let card = this.parentElement;//whole event-card tai holo parent
 
         let badge = card.getElementsByClassName("badge")[0];
 
