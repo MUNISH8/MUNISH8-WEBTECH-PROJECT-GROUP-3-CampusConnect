@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect Notice Board</title>
+    <link rel="stylesheet" href="../CSS/events.css">
+    <link rel="stylesheet" href="../CSS/notices.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo-section">
+            <div class="logo"></div>
+            <h2>CampusConnect</h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="Materials.html">Materials</a>
+            <a href="events.html">Events</a>
+            <a href="notices.html" class="active">Notices</a>
+        </nav>
+
+        <div class="user-section">
+            <span>Samia Afroze</span>
+            <a href="Day4index.html" class="logout">Logout</a>
+        </div>
+
+    </header>
+
+    <main class="main">
+
+        <h1>Notice Board</h1>
+
+        <p class="subtitle">
+            Stay updated with important campus notices and announcements.
+        </p>
+
+        <div class="toolbar">
+
+            <input type="search"
+                   id="searchBox"
+                   placeholder="Search notices"
+                   oninput="showNotices()">
+
+            <select id="filterBox" onchange="showNotices()">
+                <option value="">All Categories</option>
+                <option value="Exam">Exam</option>
+                <option value="Event">Event</option>
+                <option value="General">General</option>
+            </select>
+
+        </div>
+
+        <div class="event-grid" id="noticeList">
+
+            <div class="event-card" data-category="Exam">
+
+                <span class="badge important">
+                    Important
+                </span>
+
+                <h3>Midterm Examination Schedule</h3>
+
+                <p class="club">Exam</p>
+
+                <p class="details">November 15, 2026</p>
+
+                <p class="desc">
+                    The midterm examination schedule has been published.
+                    Students are requested to check their exam dates.
+                </p>
+
+            </div>
+
+            <div class="event-card" data-category="Event">
+
+                <span class="badge new">
+                    New
+                </span>
+
+                <h3>Campus Cultural Program</h3>
+
+                <p class="club">Event</p>
+
+                <p class="details">November 18, 2026</p>
+
+                <p class="desc">
+                    A cultural program will be held on campus.
+                    All students are welcome to attend.
+                </p>
+
+            </div>
+
+            <div class="event-card" data-category="General">
+
+                <span class="badge new">
+                    New
+                </span>
+
+                <h3>Library Opening Hours</h3>
+
+                <p class="club">General</p>
+
+                <p class="details">November 20, 2026</p>
+
+                <p class="desc">
+                    The university library has updated its opening hours.
+                    Students are requested to follow the new schedule.
+                </p>
+
+            </div>
+
+        </div>
+
+        <p id="noResult" class="subtitle" hidden>No notices found.</p>
+
+    </main>
+
+    <script src="../JavaScript/notices.js"></script>
+
+</body>
+</html>
