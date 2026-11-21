@@ -3,13 +3,13 @@
 
 document.getElementById("createBtn").addEventListener("click", function()
 {
-    document.getElementById("eventForm").hidden = false;
+    document.getElementById("eventForm").hidden = false; //create event e click korle, form ta ar hidden thakbena
 });
 
 
 document.getElementById("cancelBtn").addEventListener("click", function()
 {
-    document.getElementById("eventForm").hidden = true;
+    document.getElementById("eventForm").hidden = true; //cancle button e click korle form ta hidden hoye jabe
 });
 
 
@@ -45,9 +45,9 @@ document.getElementById("eventForm").addEventListener("submit", function(event)
     let card = document.createElement("div");
 
     card.className = "event-card";
-    card.setAttribute("data-status", status);
+    card.setAttribute("data-status", status); //card er attribute ta status theke nicche
 
-    let badgeClass = status.toLowerCase();
+    let badgeClass = status.toLowerCase(); //admin jei status dibe, shei status tai hobe badclass er bhitorer value
 
     card.innerHTML =
         '<span class="badge ' + badgeClass + '">' +
@@ -101,9 +101,9 @@ let deleteButtons = document.getElementsByClassName("delete-btn");
 
 for (let i = 0; i < deleteButtons.length; i++)
 {
-    deleteButtons[i].addEventListener("click", function()
+    deleteButtons[i].addEventListener("click", function()  //selecting all the delete button; karon each existing event er delete button e click korle same event occur hobe.
     {
-        let card = this.parentElement;
+        let card = this.parentElement; // delete button ta jei event-card er child take card e rakhtesi;
 
         card.remove();
 
