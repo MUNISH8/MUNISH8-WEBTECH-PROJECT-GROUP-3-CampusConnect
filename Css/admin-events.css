@@ -1,0 +1,377 @@
+
+/* General Styling */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #FAF7F2;
+    color: #333333;
+}
+
+
+/* Navbar */
+
+.navbar
+{
+    background-color: #7F9F7D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo-section
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo
+{
+    width: 30px;
+    height: 30px;
+    background-color: #C9A77E;
+    border-radius: 6px;
+}
+
+.logo-section h2
+{
+    font-size: 22px;
+}
+
+.nav-links
+{
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a
+{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.nav-links a:hover,
+.nav-links .active
+{
+    background-color: white;
+    color: #607B5E;
+    border-radius: 6px;
+}
+
+.user-section
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-badge
+{
+    background-color: #E8D5BD;
+    color: #607B5E;
+    padding: 7px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.logout
+{
+    background-color: white;
+    color: #607B5E;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+
+/* Main Content */
+
+.main
+{
+    max-width: 1120px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.heading-section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h1
+{
+    color: #607B5E;
+    font-size: 32px;
+}
+
+.subtitle
+{
+    color: #777777;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+
+/* Create Event Button */
+
+.create-btn
+{
+    background-color: #607B5E;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create-btn:hover
+{
+    background-color: #4F694D;
+}
+
+
+/* Create Event Form */
+
+#eventForm
+{
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #E5D9CB;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+#eventForm h2
+{
+    color: #607B5E;
+    margin-bottom: 20px;
+}
+
+#eventForm label
+{
+    display: block;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#eventForm input,
+#eventForm select,
+#eventForm textarea
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+#eventForm textarea
+{
+    height: 80px;
+}
+
+#eventForm button
+{
+    margin-top: 18px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #607B5E;
+    color: white;
+    font-weight: bold;
+}
+
+#eventForm #cancelBtn
+{
+    background-color: #D9C5AF;
+    color: #333333;
+    margin-left: 8px;
+}
+
+
+/* Search and Filter */
+
+.toolbar
+{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.toolbar input
+{
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.toolbar select
+{
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+
+/* Event Cards */
+
+.event-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-card
+{
+    background-color: white;
+    border: 1px solid #E5D9CB;
+    border-left: 5px solid #C9A77E;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.event-card h3
+{
+    color: #607B5E;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.club,
+.details,
+.registered-count
+{
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.desc
+{
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+
+/* Status Badges */
+
+.badge
+{
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.open
+{
+    background-color: #DCEED9;
+    color: #426B40;
+}
+
+.registered
+{
+    background-color: #E5EEE8;
+    color: #426B5B;
+}
+
+.closed
+{
+    background-color: #F4E4DE;
+    color: #A65F43;
+}
+
+
+/* Delete Button */
+
+.delete-btn
+{
+    background-color: white;
+    color: #B65D4A;
+    border: 1px solid #B65D4A;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn:hover
+{
+    background-color: #F4E4DE;
+}
+
+
+/* No Result */
+
+#noResult
+{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px)
+{
+    .event-grid
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar
+    {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .event-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .heading-section
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .toolbar
+    {
+        flex-direction: column;
+    }
+
+    .nav-links
+    {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
