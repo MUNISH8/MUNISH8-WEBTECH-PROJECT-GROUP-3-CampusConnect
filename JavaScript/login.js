@@ -45,7 +45,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event)
 
     if (email.startsWith("admin"))
     {
-        window.location.href = "admin.html";
+        window.location.href = "admin-dashboard.html";
     }
 
     else
