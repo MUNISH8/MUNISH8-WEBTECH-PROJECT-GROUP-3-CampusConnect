@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect Admin Dashboard</title>
+    <link rel="stylesheet" href="../CSS/admin-dashboard.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="admin-dashboard.html" class="logo-section">
+            <img src="../images/logo.png" alt="CampusConnect logo" class="logo">
+            <span>CampusConnect</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main">
+            <a href="admin-dashboard.html" class="active">Dashboard</a>
+            <a href="materials.html">Materials</a>
+            <a href="events.html">Events</a>
+        </nav>
+
+        <div class="user-section">
+            <span class="role-tag admin">Admin</span>
+            <span id="userName">Administrator</span>
+            <a href="login.html" class="logout">Logout</a>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="ph">
+            <div>
+                <h1>Hello, Administrator</h1>
+                <p class="sub">You are signed in as an administrator.</p>
+            </div>
+            <button type="button" class="btn" id="openCreate">+ Create notice</button>
+        </div>
+
+        <section class="stats" aria-label="Summary">
+            <a href="#noticeBoard" class="card pad stat">
+                <span class="mt">Students</span>
+                <b>1,248</b>
+            </a>
+            <a href="#noticeBoard" class="card pad stat">
+                <span class="mt">Notices</span>
+                <b id="statNotices">5</b>
+            </a>
+            <a href="materials.html" class="card pad stat">
+                <span class="mt">Course materials</span>
+                <b>5</b>
+            </a>
+            <a href="events.html" class="card pad stat">
+                <span class="mt">Events</span>
+                <b>4</b>
+            </a>
+        </section>
+
+        <div class="two">
+
+            <section id="noticeBoard">
+                <h2>Notice board</h2>
+
+                <div class="bar">
+                    <input type="search" id="searchBox" aria-label="Search notices" placeholder="Search notices">
+
+                    <select id="catFilter" aria-label="Filter by category">
+                        <option value="">All categories</option>
+                        <option>Academic</option>
+                        <option>Examination</option>
+                        <option>Administrative</option>
+                        <option>Events</option>
+                        <option>General</option>
+                    </select>
+                </div>
+
+                <div class="list" id="noticeList">
+
+                    <article class="card pad notice" data-category="Examination">
+                        <span class="badge">Examination</span>
+                        <h3>Midterm Examination Schedule Published</h3>
+                        <p class="mt">Controller of Examinations &middot; Oct 22, 2026</p>
+                        <p class="body">The Fall 2026 midterm examinations begin on Nov 9. Room and seat plans are available at the exam office.</p>
+                        <button type="button" class="btn del">Delete</button>
+                    </article>
+
+                    <article class="card pad notice" data-category="Academic">
+                        <span class="badge">Academic</span>
+                        <h3>Spring Semester Registration Announcement</h3>
+                        <p class="mt">Registrar's Office &middot; Oct 20, 2026</p>
+                        <p class="body">Course registration for Spring 2027 opens on Nov 15 and closes on Nov 25. Meet your advisor first.</p>
+                        <button type="button" class="btn del">Delete</button>
+                    </article>
+
+                    <article class="card pad notice" data-category="Administrative">
+                        <span class="badge">Administrative</span>
+                        <h3>University Library Hours Updated</h3>
+                        <p class="mt">Central Library &middot; Oct 19, 2026</p>
+                        <p class="body">The library will stay open until 10:00 PM on weekdays during the examination period.</p>
+                        <button type="button" class="btn del">Delete</button>
+                    </article>
+
+                    <article class="card pad notice" data-category="Administrative">
+                        <span class="badge">Administrative</span>
+                        <h3>Scholarship Application Deadline Extended</h3>
+                        <p class="mt">Student Affairs &middot; Oct 15, 2026</p>
+                        <p class="body">The merit scholarship deadline has been extended to Nov 5.</p>
+                        <button type="button" class="btn del">Delete</button>
+                    </article>
+
+                    <article class="card pad notice" data-category="General">
+                        <span class="badge">General</span>
+                        <h3>Campus Wi-Fi Maintenance on Saturday</h3>
+                        <p class="mt">IT Services &middot; Oct 14, 2026</p>
+                        <p class="body">Wi-Fi will be unavailable from 8:00 AM to 12:00 PM this Saturday.</p>
+                        <button type="button" class="btn del">Delete</button>
+                    </article>
+
+                </div>
+
+                <div class="empty" id="noResult" hidden>No results found. Try a different keyword or filter.</div>
+            </section>
+
+            <section>
+                <div class="side-head">
+                    <h2>Upcoming events</h2>
+                    <a href="events.html" class="link">View all</a>
+                </div>
+
+                <div class="card">
+                    <div class="row">
+                        <div>
+                            <h3>Photography Competition</h3>
+                            <p class="mt">Oct 30, 2026 &middot; Campus Lawn</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <h3>Inter-University Programming Contest</h3>
+                            <p class="mt">Nov 2, 2026 &middot; Main Auditorium</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <h3>Web Development Workshop</h3>
+                            <p class="mt">Nov 5, 2026 &middot; Computer Lab 4</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="mb" id="modal" hidden>
+        <div class="md" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <h2 id="modalTitle">Create notice</h2>
+
+            <form id="noticeForm" novalidate>
+                <div class="fg">
+                    <label for="nTitle">Title <span class="req">*</span></label>
+                    <input type="text" id="nTitle" name="title">
+                    <div class="err"></div>
+                </div>
+
+                <div class="fg">
+                    <label for="nCat">Category <span class="req">*</span></label>
+                    <select id="nCat" name="category">
+                        <option value="">Select a category</option>
+                        <option>Academic</option>
+                        <option>Examination</option>
+                        <option>Administrative</option>
+                        <option>Events</option>
+                        <option>General</option>
+                    </select>
+                    <div class="err"></div>
+                </div>
+
+                <div class="fg">
+                    <label for="nSummary">Summary <span class="req">*</span></label>
+                    <textarea id="nSummary" name="summary" rows="3"></textarea>
+                    <div class="err"></div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn">Publish</button>
+                    <button type="button" class="btn cancel" id="cancelCreate">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" role="status"></div>
+
+    <script src="../JavaScript/admin-dashboard.js"></script>
+</body>
+</html>
