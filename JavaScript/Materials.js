@@ -1,5 +1,5 @@
 
-// ---------- STEP 1: READ SHARED STORAGE ----------
+// READ SHARED STORAGE 
 
 let defaultMaterials = [
     { id: 1, title: "Introduction to Algorithms", code: "CSE 2211", dept: "CSE", sem: "3", type: "pdf",  date: "Oct 1, 2026",  fileName: "", fileData: "" },
@@ -29,7 +29,7 @@ function escapeHtml(text)
 }
 
 
-// ---------- STEP 2: SHOW MATERIALS ----------
+//  SHOW MATERIALS 
 
 function showMaterials()
 {
@@ -69,7 +69,7 @@ function showMaterials()
 }
 
 
-// ---------- STEP 3: DOWNLOAD ----------
+//  DOWNLOAD 
 
 document.getElementById("materialGrid").addEventListener("click", function(event)
 {
@@ -105,7 +105,7 @@ document.getElementById("materialGrid").addEventListener("click", function(event
 });
 
 
-// ---------- STEP 4: SEARCH AND FILTER ----------
+// SEARCH AND FILTER 
 
 function filterMaterials()
 {
@@ -154,6 +154,6 @@ document.getElementById("semFilter").addEventListener("change", filterMaterials)
 document.getElementById("typeFilter").addEventListener("change", filterMaterials);
 
 
-// ---------- START ----------
+//START 
 
 showMaterials();
