@@ -10,15 +10,15 @@ let defaultMaterials = [
 
 function getMaterials()
 {
-    let data = localStorage.getItem("materials");
+    let data = localStorage.getItem("materials"); // The localStorage is a small storage in the browser
 
     if (data == null)
     {
-        localStorage.setItem("materials", JSON.stringify(defaultMaterials));
+        localStorage.setItem("materials", JSON.stringify(defaultMaterials)); // convert the object array to string  
         return defaultMaterials;
     }
 
-    return JSON.parse(data);
+    return JSON.parse(data); //converting the string back to object array
 }
 
 function saveMaterials(list)
