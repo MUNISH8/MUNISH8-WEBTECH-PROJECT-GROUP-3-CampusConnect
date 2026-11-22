@@ -1,5 +1,5 @@
 
-// ---------- STEP 1: SHARED STORAGE ----------
+//  SHARED STORAGE 
 
 let defaultMaterials = [
     { id: 1, title: "Introduction to Algorithms", code: "CSE 2211", dept: "CSE", sem: "3", type: "pdf",  date: "Oct 1, 2026",  fileName: "", fileData: "" },
@@ -43,7 +43,7 @@ function escapeHtml(text)
 }
 
 
-// ---------- STEP 2: SHOW MATERIALS ----------
+// STEP 2: SHOW MATERIALS 
 
 function showMaterials()
 {
@@ -90,7 +90,7 @@ function showMaterials()
 }
 
 
-// ---------- STEP 3: SHOW AND HIDE UPLOAD FORM ----------
+//  STEP 3: SHOW AND HIDE UPLOAD FORM 
 
 document.getElementById("createBtn").addEventListener("click", function()
 {
@@ -103,7 +103,7 @@ document.getElementById("cancelBtn").addEventListener("click", function()
 });
 
 
-// ---------- STEP 4: UPLOAD NEW MATERIAL ----------
+// STEP 4: UPLOAD NEW MATERIAL 
 
 function addMaterial(title, code, dept, sem, type, fileName, fileData)
 {
@@ -186,7 +186,7 @@ document.getElementById("materialForm").addEventListener("submit", function(even
 });
 
 
-// ---------- STEP 5: DELETE MATERIAL ----------
+//  STEP 5: DELETE MATERIAL 
 
 document.getElementById("materialGrid").addEventListener("click", function(event)
 {
@@ -213,7 +213,7 @@ document.getElementById("materialGrid").addEventListener("click", function(event
 });
 
 
-// ---------- STEP 6: SEARCH AND FILTER ----------
+// STEP 6: SEARCH AND FILTER 
 
 function filterMaterials()
 {
@@ -262,6 +262,6 @@ document.getElementById("semFilter").addEventListener("change", filterMaterials)
 document.getElementById("typeFilter").addEventListener("change", filterMaterials);
 
 
-// ---------- START ----------
+// START 
 
 showMaterials();
