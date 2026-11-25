@@ -47,7 +47,7 @@ document.getElementById("eventForm").addEventListener("submit", function(event)
     card.className = "event-card";
     card.setAttribute("data-status", status); //card er attribute ta status theke nicche
 
-    let badgeClass = status.toLowerCase(); //admin jei status dibe, shei status tai hobe badclass er bhitorer value
+    let badgeClass = status.toLowerCase(); //admin jei status dibe, shei status tai hobe badgeclass er bhitorer value
 
     card.innerHTML =
         '<span class="badge ' + badgeClass + '">' +
@@ -97,7 +97,7 @@ document.getElementById("eventForm").addEventListener("submit", function(event)
 
 // Step 3: Delete Existing Events
 
-let deleteButtons = document.getElementsByClassName("delete-btn");
+let deleteButtons = document.getElementsByClassName("delete-btn"); //jehetu shob gula delete button e same event lagbe 
 
 for (let i = 0; i < deleteButtons.length; i++)
 {
