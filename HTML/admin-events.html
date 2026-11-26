@@ -1,41 +1,41 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="adminEventsPage" class="admin-events-page">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head id="adminEventsHead" class="admin-events-head">
+    <meta charset="UTF-8" id="adminEventsCharset" class="meta-tag">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="adminEventsViewport" class="meta-tag">
 
-    <title>CampusConnect Admin Events</title>
+    <title id="adminEventsTitle" class="page-title">CampusConnect Admin Events</title>
 
-    <link rel="stylesheet" href="../Css/admin-events.css">
+    <link rel="stylesheet" href="../Css/admin-events.css" id="adminEventsCSS" class="stylesheet">
 </head>
 
-<body>
+<body id="adminEventsBody" class="admin-events-body">
 
     <!-- Navbar -->
 
-    <header class="navbar">
+    <header class="navbar" id="adminNavbar">
 
-        <div class="logo-section">
-                    <a href="dashboard.html">
+        <div class="logo-section" id="adminLogoSection">
+            <a href="dashboard.html" id="logoLink" class="logo-link">
                 <img src="../Image/campusconnect-high-resolution-logo.png"
-                     alt="CampusConnect Logo" class="logo">
+                     alt="CampusConnect Logo" class="logo" id="campusLogo">
             </a>
-            <h2>CampusConnect</h2>
+            <h2 id="campusName" class="brand-name">CampusConnect</h2>
         </div>
 
-        <nav class="nav-links">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="admin-Materials.html">Materials</a>
-            <a href="admin-events.html" class="active">Events</a>
-            <a href="admin.html">Notice</a>
+        <nav class="nav-links" id="adminNavLinks">
+            <a href="dashboard.html" id="dashboardLink" class="nav-link">Dashboard</a>
+            <a href="admin-Materials.html" id="materialsLink" class="nav-link">Materials</a>
+            <a href="admin-events.html" id="eventsLink" class="active nav-link">Events</a>
+            <a href="admin.html" id="noticeLink" class="nav-link">Notice</a>
         </nav>
 
-        <div class="user-section">
-            <span class="admin-badge">Admin</span>
-            <span>Administrator</span>
-            <a href="login.html" class="logout">Logout</a>
+        <div class="user-section" id="adminUserSection">
+            <span class="admin-badge" id="adminBadge">Admin</span>
+            <span id="adminUsername" class="username">Administrator</span>
+            <a href="login.html" class="logout" id="logoutLink">Logout</a>
         </div>
 
     </header>
@@ -43,14 +43,14 @@
 
     <!-- Main Content -->
 
-    <main class="main">
+    <main class="main" id="adminMainContent">
 
-        <div class="heading-section">
+        <div class="heading-section" id="eventHeadingSection">
 
-            <div>
-                <h1>Manage Events</h1>
+            <div id="eventHeadingContent" class="heading-content">
+                <h1 id="eventPageHeading" class="main-heading">Manage Events</h1>
 
-                <p class="subtitle">
+                <p class="subtitle" id="eventPageSubtitle">
                     Create, manage and monitor campus events.
                 </p>
             </div>
@@ -64,38 +64,38 @@
 
         <!-- Create Event Form -->
 
-        <form id="eventForm" hidden>
+        <form id="eventForm" class="event-form" hidden>
 
-            <h2>Create New Event</h2>
+            <h2 id="eventFormHeading" class="form-heading">Create New Event</h2>
 
-            <label for="eventName">Event Name</label>
-            <input type="text" id="eventName" required>
+            <label for="eventName" id="eventNameLabel" class="form-label">Event Name</label>
+            <input type="text" id="eventName" class="form-input" required>
 
-            <label for="club">Club Name</label>
-            <input type="text" id="club" required>
+            <label for="club" id="clubLabel" class="form-label">Club Name</label>
+            <input type="text" id="club" class="form-input" required>
 
-            <label for="eventDate">Event Date</label>
-            <input type="date" id="eventDate" required>
+            <label for="eventDate" id="eventDateLabel" class="form-label">Event Date</label>
+            <input type="date" id="eventDate" class="form-input" required>
 
-            <label for="location">Location</label>
-            <input type="text" id="location" required>
+            <label for="location" id="locationLabel" class="form-label">Location</label>
+            <input type="text" id="location" class="form-input" required>
 
-            <label for="deadline">Registration Deadline</label>
-            <input type="date" id="deadline" required>
+            <label for="deadline" id="deadlineLabel" class="form-label">Registration Deadline</label>
+            <input type="date" id="deadline" class="form-input" required>
 
-            <label for="description">Description</label>
-            <textarea id="description" required></textarea>
+            <label for="description" id="descriptionLabel" class="form-label">Description</label>
+            <textarea id="description" class="form-textarea" required></textarea>
 
-            <label for="status">Registration Status</label>
+            <label for="status" id="statusLabel" class="form-label">Registration Status</label>
 
-            <select id="status">
-                <option value="Open">Open</option>
-                <option value="Closed">Closed</option>
+            <select id="status" class="form-select">
+                <option value="Open" id="statusOpenOption" class="status-option">Open</option>
+                <option value="Closed" id="statusClosedOption" class="status-option">Closed</option>
             </select>
 
-            <button type="submit">Save Event</button>
+            <button type="submit" id="saveEventBtn" class="form-button save-btn">Save Event</button>
 
-            <button type="button" id="cancelBtn">
+            <button type="button" id="cancelBtn" class="form-button cancel-btn">
                 Cancel
             </button>
 
@@ -104,18 +104,19 @@
 
         <!-- Search and Filter -->
 
-        <div class="toolbar">
+        <div class="toolbar" id="eventToolbar">
 
             <input type="search"
                    id="searchBox"
+                   class="toolbar-input search-input"
                    placeholder="Search events or clubs">
 
-            <select id="filterBox">
+            <select id="filterBox" class="toolbar-input filter-select">
 
-                <option value="">All Events</option>
-                <option value="Open">Open</option>
-                <option value="Registered">Registered</option>
-                <option value="Closed">Closed</option>
+                <option value="" id="allEventsOption" class="filter-option">All Events</option>
+                <option value="Open" id="openEventsOption" class="filter-option">Open</option>
+                <option value="Registered" id="registeredEventsOption" class="filter-option">Registered</option>
+                <option value="Closed" id="closedEventsOption" class="filter-option">Closed</option>
 
             </select>
 
@@ -129,29 +130,29 @@
 
             <!-- Event 1 -->
 
-            <div class="event-card" data-status="Closed">
+            <div class="event-card" id="eventCard1" data-status="Closed">
 
-                <span class="badge closed">
+                <span class="badge closed" id="eventBadge1">
                     Registration Closed
                 </span>
 
-                <h3>Photography Competition</h3>
+                <h3 id="eventName1" class="event-name">Photography Competition</h3>
 
-                <p class="club">Photography Club</p>
+                <p class="club" id="eventClub1">Photography Club</p>
 
-                <p class="details">
+                <p class="details" id="eventDetails1">
                     Oct 30, 2026 | Campus Lawn
                 </p>
 
-                <p class="desc">
+                <p class="desc" id="eventDescription1">
                     Submit your best campus photograph.
                 </p>
 
-                <p class="registered-count">
+                <p class="registered-count" id="registeredCount1">
                     36 registered | Deadline Oct 23, 2026
                 </p>
 
-                <button class="delete-btn">
+                <button class="delete-btn" id="deleteEventBtn1">
                     Delete
                 </button>
 
@@ -160,30 +161,30 @@
 
             <!-- Event 2 -->
 
-            <div class="event-card" data-status="Open">
+            <div class="event-card" id="eventCard2" data-status="Open">
 
-                <span class="badge open">
+                <span class="badge open" id="eventBadge2">
                     Registration Open
                 </span>
 
-                <h3>Inter-University Programming Contest</h3>
+                <h3 id="eventName2" class="event-name">Inter-University Programming Contest</h3>
 
-                <p class="club">Programming Club</p>
+                <p class="club" id="eventClub2">Programming Club</p>
 
-                <p class="details">
+                <p class="details" id="eventDetails2">
                     Nov 2, 2026 | Main Auditorium
                 </p>
 
-                <p class="desc">
+                <p class="desc" id="eventDescription2">
                     Teams of three solve algorithmic problems
                     in a timed contest.
                 </p>
 
-                <p class="registered-count">
+                <p class="registered-count" id="registeredCount2">
                     132 registered | Deadline Oct 30, 2026
                 </p>
 
-                <button class="delete-btn">
+                <button class="delete-btn" id="deleteEventBtn2">
                     Delete
                 </button>
 
@@ -192,29 +193,29 @@
 
             <!-- Event 3 -->
 
-            <div class="event-card" data-status="Registered">
+            <div class="event-card" id="eventCard3" data-status="Registered">
 
-                <span class="badge registered">
+                <span class="badge registered" id="eventBadge3">
                     Registered
                 </span>
 
-                <h3>Web Development Workshop</h3>
+                <h3 id="eventName3" class="event-name">Web Development Workshop</h3>
 
-                <p class="club">Programming Club</p>
+                <p class="club" id="eventClub3">Programming Club</p>
 
-                <p class="details">
+                <p class="details" id="eventDetails3">
                     Nov 5, 2026 | Computer Lab 4
                 </p>
 
-                <p class="desc">
+                <p class="desc" id="eventDescription3">
                     Hands-on session on HTML, CSS and JavaScript.
                 </p>
 
-                <p class="registered-count">
+                <p class="registered-count" id="registeredCount3">
                     49 registered | Deadline Nov 3, 2026
                 </p>
 
-                <button class="delete-btn">
+                <button class="delete-btn" id="deleteEventBtn3">
                     Delete
                 </button>
 
@@ -223,29 +224,29 @@
 
             <!-- Event 4 -->
 
-            <div class="event-card" data-status="Open">
+            <div class="event-card" id="eventCard4" data-status="Open">
 
-                <span class="badge open">
+                <span class="badge open" id="eventBadge4">
                     Registration Open
                 </span>
 
-                <h3>Cultural Night</h3>
+                <h3 id="eventName4" class="event-name">Cultural Night</h3>
 
-                <p class="club">Cultural Club</p>
+                <p class="club" id="eventClub4">Cultural Club</p>
 
-                <p class="details">
+                <p class="details" id="eventDetails4">
                     Nov 14, 2026 | Open Air Stage
                 </p>
 
-                <p class="desc">
+                <p class="desc" id="eventDescription4">
                     An evening of music, dance and drama.
                 </p>
 
-                <p class="registered-count">
+                <p class="registered-count" id="registeredCount4">
                     90 registered | Deadline Nov 12, 2026
                 </p>
 
-                <button class="delete-btn">
+                <button class="delete-btn" id="deleteEventBtn4">
                     Delete
                 </button>
 
@@ -254,14 +255,14 @@
         </div>
 
 
-        <p id="noResult" class="subtitle" hidden>
+        <p id="noResult" class="subtitle no-result-message" hidden>
             No events found.
         </p>
 
     </main>
 
 
-    <script src="../Javascript/admin-events.js"></script>
+    <script src="../Javascript/admin-events.js" id="adminEventsJS" class="javascript-file"></script>
 
 </body>
 
